@@ -1,0 +1,29 @@
+title: "Learning the Hard Way"
+tagline: "Lessions, thoughts, and opinions"
+
+description: "This is my personal space for expressing ideas, sharing knowledge and experiences. Everything here is just an opinion."
+
+url: "https://pavelbrm.com"
+baseurl: ""
+permalink: "pretty"
+paginate: 10
+
+author:
+  name: "Pavel Brm"
+
+twitter_username: "pavelbrm"
+github_username: "pavelbrm"
+
+excerpt_separator: "<!--more-->"
+
+timezone: "UTC"
+
+version: 0.0.1
+updated_at: "11.01.2020"
+
+plugins:
+  - "jekyll-paginate"
+
+exclude:
+  - "LICENSE"
+  - "README.md"
