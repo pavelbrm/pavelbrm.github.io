@@ -19,7 +19,7 @@ excerpt_separator: "<!--more-->"
 timezone: "UTC"
 
 version: 0.0.1
-updated_at: "11.01.2020"
+updated_at: "23.02.2020"
 
 plugins:
   - "jekyll-paginate"
