@@ -16,7 +16,7 @@ _The article uses a personalised communication style to ease the conversation an
 
 ## Why
 
-Go Modules arrived a year and a half ago with `go1.11`. It's not possible to describe the reasons behind the decision better than Rust Cox did it in his series of posts. If you haven't read them yet, it is probably worth reading. It gives you the full picture of why and how the team has arrived to that decision:
+Go Modules arrived a year and a half ago with `go1.11`. It's not possible to describe the reasons behind the decision better than Russ Cox did it in his series of posts. If you haven't read them yet, it is probably worth reading. It gives you the full picture of why and how the team has arrived to that decision:
 - [The Proposal](https://blog.golang.org/versioning-proposal)
 - [The original blog post series](https://research.swtch.com/vgo)
 
