@@ -77,16 +77,19 @@ Now as we agreed that it's worth migrating, and have known and planned when to d
 
 ## How
 
-Alright, it's time to do some actual work.
+Alright, it's time to do some real work.
 
 Just before we get started, here is what we need to bear in mind before, during and after the migration:
-- You may probably want to reconsider approach to vendoring.\
-While Go Modules is extremely convenient, the classic approach to vendoring has become a bit complicated. Why? Because Go Modules provides another (and I think, a better) approach to dependencies. It drastically reduces the need in vendored dependencies. And even if you do still need them, it has something to offer. If that doesn't suit your needs, then well, you'll struggle.
-- You may probably want or need to update the IDE/code editor.\
-If Goland is the IDE of choice, carry on and don't worry. If you're already on [gopls](https://github.com/golang/tools/tree/master/gopls) or [bingo](https://github.com/saibing/bingo) plus some code editor like VS Code/Vim/whatever, don't worry and move on. Otherwise, the tooling needs to be upgraded. The set of tools many of us got used to (like `gocode` and the guys) **do not support** modules, and thus - no autocompletion, go to definition and all of these convenient tools;
+- You may probably want to reconsider approach to vendoring.
+
+    While Go Modules is extremely convenient, the classic approach to vendoring has become a bit complicated. Why? Because Go Modules provides another (and I think, a better) approach to dependencies. It drastically reduces the need in vendored dependencies. And even if you do still need them, it has something to offer. If that doesn't suit your needs, then well, you'll struggle.
+- You may probably want or need to update the IDE/code editor.
+
+    If Goland is the IDE of choice, carry on and don't worry. If you're already on [gopls](https://github.com/golang/tools/tree/master/gopls) or [bingo](https://github.com/saibing/bingo) plus some code editor like VS Code/Vim/whatever, don't worry and move on. Otherwise, the tooling needs to be upgraded. The set of tools many of us got used to (like `gocode` and the guys) **do not support** modules, and thus - no autocompletion, go to definition and all of these convenient tools;
 - There is some chore work involved with amending any build scripts you use.
 - If you're still using Golang below `1.13`, upgrading to it is a must.\
-Make sure `go version` gives a version of `1.13.x`. Upgrading to the latest version is outside of the scope of this article.
+
+    Make sure `go version` gives a version of `1.13.x`. Upgrading to the latest version is outside of the scope of this article.
 
 Some of the questions above will be covered later. For now, let's get started, and go from the easiest case to a more advanced one.
 
