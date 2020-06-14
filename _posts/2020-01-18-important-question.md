@@ -1,6 +1,8 @@
 ---
 layout: post
 title: An Important Question
+category: Life
+tags: [self-awareness, honesty]
 ---
 
 
@@ -27,7 +29,3 @@ This question is one the most important questions in life. There is no way to gi
 Next time passing a mirror, stop for a moment, look at the reflection and ask the question.
 
 **Who are you?**
-
----
-
-<a href="{{ site.baseurl }}/">Head back home</a>

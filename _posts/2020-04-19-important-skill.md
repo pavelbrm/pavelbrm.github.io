@@ -1,6 +1,8 @@
 ---
 layout: post
 title: The Most Important Skill
+category: Life
+tags: [gratitude]
 ---
 
 
@@ -48,7 +50,3 @@ It took me 5 years from start to these days, and I'm better at this now, but sti
 I challenge you, the reader, to be grateful every single day for the next 30 days. Be grateful for what you're able to do with your body, for what you already have, for those who are around you, for those who care about you. And then, continue for the rest of your life.
 
 Thank you for your time and attention.
-
----
-
-<a href="{{ site.baseurl }}/">Head back home</a>
