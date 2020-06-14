@@ -1,5 +1,5 @@
-title: "Learning the Hard Way"
-tagline: "Lessons, thoughts, and opinions"
+title: "Creating Order out of Chaos"
+tagline: "Learning, creating, sharing"
 
 description: "This is my personal space for expressing ideas, sharing knowledge and experiences. Everything here is just an opinion."
 
@@ -28,3 +28,7 @@ exclude:
   - "LICENSE"
   - "README.md"
   - "docker-compose.yml"
+
+custom_pages:
+  tags: "/tags/"
+  categories: "/categories/"

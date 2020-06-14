@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Migrating to Go Modules
+category: Programming
+tags: [golang, modules]
 ---
 
 
@@ -209,7 +211,3 @@ If you do see the need in a sort of vendoring, then it is worth considering usin
 That's it. If you've made this far, thank you for your attention, and my hopes that this has been useful for you.
 
 **Happy coding!**
-
----
-
-<a href="{{ site.baseurl }}/">Head back home</a>
