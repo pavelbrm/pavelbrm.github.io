@@ -41,7 +41,7 @@ Implementing the plugin took a couple of days, and pretty soon a fully functiona
 
 That experience and further experiments convinced me in two things. The first is that it's worth investing in mastering Golang, as it's a great tool for developing performant and resilient solutions. Much more convenient, peformant and stable than with other tools and languages. The second is that migrating the project to Golang would solve the existing and prevent from many potential future problems.
 
-So I commited to learning Golang in a way that I find meaniningful. In short, this means that you get a firm foundation by:
+So I made a commitment to learn Golang in a way that I find meaniningful. In short, this means that you get a firm foundation by:
 - thoroughly studying high-quality materials (i.e. good books)
 - practise as you learn
 - read tons of code on the Internet
