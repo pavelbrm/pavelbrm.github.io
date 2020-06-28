@@ -74,7 +74,7 @@ This is something that concerns me. It doesn't have to be like this.
 
 It all starts with a name.
 
-The name `Golocron` consists of two parts, one obviously being `Go`. The other though has nothing to do with task scheduling via `cron`. The second part comes from the word `Holocron`, which is the name of a small [device](https://starwars.fandom.com/wiki/Holocron/Legends) from the Star Wars Universe.
+The name `Golocron` consists of two parts, one obviously being `Go`. The other though has nothing to do with task scheduling via `cron`. The second part comes from the word `Holocron`, which is the name of a small [device](https://starwars.fandom.com/wiki/Sith_holocron/Legends) from the Star Wars Universe.
 
 Having combined the two words together, we get the folloing meaning: something that  contains knowledge about different ways of using Golang, and is available for those who searched for it. Now, add a bit of detail to make it self-explaining, and we get "Golocron - Software Development With Golang".
 
