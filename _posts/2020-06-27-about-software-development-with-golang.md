@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About Software Development with Golang
+title: About Software Development with Go
 category: Programming
 tags: [golang]
 ---
@@ -10,7 +10,7 @@ tags: [golang]
 >
 > – Darth Bane, The Rule of Two
 
-This post tells about my experiences with Golang, and announces one project I've been working on recently.
+This post tells about my experiences with Go programming language, and announces one project I've been working on recently.
 
 
 <!--more-->
@@ -24,24 +24,24 @@ At some point in the past I worked on a monitoring solution for infrastructure a
 
 The initial version was implemented as a set of plugins and tools that we built around [Sensu](https://sensu.io/). At that time the Sensu company hadn't even existed, and the project was based on Ruby and Bash. Our project was also a mixture of some Ruby, Node.js and Bash. It was enough to build a proof of concept.
 
-As our project evolved, we migrated everything to Python, mostly because it _seemed_ easier to distribute, retrieve the information about the system and underlying components, and so forth. It also seemed to be a good choice since the vast majority of system tools uses it, it's shipped by default in most Linux distributions, and is familiar to both sysadmins and developers.
+As our project evolved, we migrated everything to Python, mostly because it _seemed_ easier to distribute, retrieve the information about the system and underlying components, and so forth. It also seemed to be a good choice since the vast majority of system tools uses it, it's shipped by default in most Linux systems, and is familiar to both sysadmins and developers.
 
 While the solution worked at the beginning, we started facing new challenges. One of them was poor performance of the backend services. A SaaS-fashioned monitoring solution has to handle lots of data, and one of the goals with infrastructure monitoring is ensuring data is of a high precision, and is available as soon as possible for further processing and the users. It became apparent that this hardly can be achieved. Given quite a large number of solutions that had existed that time, the chances of offering a greater experience to the user were negative.
 
-Another challenge was distirbution of the agent. Supporting even a small subset of the most popular Linux distributions requires maintaining and _properly packaging_ software in tens of different combinations. Take several Ubuntus, then a couple of Debians, add some CentOSes, and we've got half a dozen of different versions of Python, not to mention the availability of dependencies, dealing with init systems and so on.
+Another challenge was distribution of the agent. Supporting even a small subset of the most popular Linux distributives requires maintaining and _properly packaging_ software in tens of different combinations. Take several Ubuntus, then a couple of Debians, add some CentOSes, and we've got half a dozen of different versions of Python, not to mention the availability of dependencies, dealing with init systems and so on.
 
 Development and testing processes are also important. It was clear that supporting such a project will quickly become a nightmare for a small team, so I needed to find a better solution to address the these and some other issues.
 
 
-## First Look at Golang
+## First Look at Go
 
-After having researched potential solutions to the problems, I decided to try Golang. The architecture of our agent allowed me to use the language to implement a small piece of functionality - a plugin, for example, for obtaining statistics from an external service.
+After having researched potential solutions to the problems, I decided to try Go. The architecture of our agent allowed me to use the language to implement a small piece of functionality - a plugin, for example, for obtaining statistics from an external service.
 
 Implementing the plugin took a couple of days, and pretty soon a fully functional version was in use. The experience suprised me. Having almost zero knowledge about the language, I was able to make a working solution, and it proved to be a stable and performant solution.
 
-That experience and further experiments convinced me in two things. The first is that it's worth investing in mastering Golang, as it's a great tool for developing performant and resilient solutions. Much more convenient, peformant and stable than with other tools and languages. The second is that migrating the project to Golang would solve the existing and prevent from many potential future problems.
+That experience and further experiments convinced me in two things. The first is that it's worth investing in mastering Go, as it's a great tool for developing performant and resilient solutions. Much more convenient, peformant and stable than with other tools and languages. The second is that migrating the project to Go would solve the existing and prevent from many potential future problems.
 
-So I made a commitment to learn Golang in a way that I find meaniningful. In short, this means that you get a firm foundation by:
+So I made a commitment to learning the language in a way that I find meaniningful. In short, this means that you get a firm foundation by:
 - thoroughly studying high-quality materials (i.e. good books)
 - practise as you learn
 - read tons of code on the Internet
@@ -61,9 +61,9 @@ There is a lot of noise, and you have to find the signal.
 
 So I kept searching, learning and working my ass off to build a solid understanding and skill. When you've got such a goal, self-discipline is required. You read about something for the second, third or even fourth time in hopes to learn something new about it. You write thousands of lines of code just to throw it away a couple of months later, and rewrite again, developing a better understanding of the language.
 
-Fost-forward to these days. As you remember, **once started, never stop learning**. By the end of 2019th, I've read from cover to cover 9 books and over 200 articles about Golang. In addition to that, I've read tens of thousands of lines of code, and seen the beauty and the ugliness of using the language. Several tens of thousands lines of code have been written in addition to what I do at work, and mostly throwed away as drafts and sketches.
+Fost-forward to these days. As you remember, **once started, never stop learning**. By the end of 2019th, I've read from cover to cover 9 books and over 200 articles about Go. In addition to that, I've read tens of thousands of lines of code, and seen the beauty and the ugliness of using the language. Several tens of thousands lines of code have been written in addition to what I do at work, and mostly throwed away as drafts and sketches.
 
-One conclusion that I ended up with is that all those materials don't give a clean understanding of how to develop maintainable and efficient applications and services using Golang. This is especially true for a reader who is searching for a guidance rather than explorations. When someone needs a practical advice on how to actually do the work, there _is_ no immediate answer. In order for one to form a view and good taste, they would basically need to go through a similar path as I've taken. But that's a very long and resource demanding path, and not everyone is ready or able to invest resources into this process.
+One conclusion that I ended up with is that all those materials don't give a clean understanding of how to develop maintainable and efficient applications and services using Go. This is especially true for a reader who is searching for a guidance rather than explorations. When someone needs a practical advice on how to actually do the work, there _is_ no immediate answer. In order for one to form a view and good taste, they would basically need to go through a similar path as I've taken. But that's a very long and resource demanding path, and not everyone is ready or able to invest resources into this process.
 
 Another problem is the quality of materials, examples, and projects in the wild. Oftentimes you're taught or shown sub-optimal ways of using the language. Many, too many projects are written recklessly, so you don't really want to use that software. Many libraries are selfish, and let down your application quite easily without giving you a way to adjust behaviour. So learning by example oftentimes is harmful, as there are too many examples of how it's better not to write software.
 
@@ -76,11 +76,11 @@ It all starts with a name.
 
 The name `Golocron` consists of two parts, one obviously being `Go`. The other though has nothing to do with task scheduling via `cron`. The second part comes from the word `Holocron`, which is the name of a small [device](https://starwars.fandom.com/wiki/Sith_holocron/Legends) from the Star Wars Universe.
 
-Having combined the two words together, we get the folloing meaning: something that  contains knowledge about different ways of using Golang, and is available for those who searched for it. Now, add a bit of detail to make it self-explaining, and we get "Golocron - Software Development With Golang".
+Having combined the two words together, we get the folloing meaning: something that  contains knowledge about different ways of using Go, and is available for those who searched for it. Now, add a bit of detail to make it self-explaining, and we get "Golocron - Software Development With Go".
 
 But what does this name indentify? What is that "something"?
 
-Well, it's a book. I'm writing a book about using Golang for developing software and services that are:
+Well, it's a book. I'm writing a book about using the language for developing software and services that are:
 - simple (but not primitive nor rigid)
 - pleasure to work with
 - easy to maintain
@@ -91,7 +91,7 @@ The book won't teach you the language. There are a few books on the topic, and i
 - [The Go Programming Language](https://www.amazon.com/Programming-Language-Addison-Wesley-Professional-Computing/dp/0134190440) by **Alan A. A. Donovan, Brian W. Kernighan**
 - [Programming in Go](https://www.amazon.com/Programming-Go-Creating-Applications-Developers/dp/0321774639) by **Mark Summerfield**
 
-So instead of writing another book about the language, I assume that the reader has some experience with Golang _and_ in software engineering.
+So instead of writing another book about the language, I assume that the reader has some experience with Go _and_ in software engineering.
 
 So what is this book going to be about?
 
@@ -153,7 +153,7 @@ The outcome of this work will be released open source.
 
 It's inspiring and frightening at the same time. It's scary to announce something publically. It's double scary because I'm not that fluent in English as I wanted to be. I don't know what it will wind up with, and also not so sure if I'm able to get it to its end.
 
-What I do know though is that I will do my best. And my hopes are this work helps someone to get more efficient and productive in writing software in general, and with using Golang, and they find it helpful.
+What I do know though is that I will do my best. And my hopes are this work helps someone to get more efficient and productive in writing software in general, and with using Go, and they find it helpful.
 
 Last 12 months I've been working on the code materials for the book. While a lot has been already done, there is still some work left to do. The materials will be open-sourced when it's time, most likely, when the most of the book is ready.
 
