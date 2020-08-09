@@ -5,16 +5,16 @@ category: Golocron
 tags: [golang, m1u1]
 ---
 
-> All of life is a constant education.
+> The beginning is the most important part of the work.
 >
-> — Eleanor Roosevelt
+> — Plato
 
 This post is opens up a series of the draft contents for [the book](https://blog.pavelbrm.com/programming/2020/06/27/about-software-development-with-golang/) I'm currently working on.
 
 
 <!--more-->
 
-![](/assets/m1u1_1.jpg)
+![](/assets/m1u1_11.jpg)
 
 
 ## Before We Begin
@@ -23,7 +23,7 @@ As mentioned in the introductionary post, the book will include three to four mo
 
 We start with the first module which is The Style Guide. The main goal of the Guide is to provide you with advice on working with projects in general, designing packages, organising contents, and, of course, writing neat and readable code.
 
-This article introduces the first unit of The Style Guide - Project Layout. The unit tells you about how to design the project layout well. The article starts with the introduction, then describes the differences between good and bad layouts, and closes with some details about types of layouts.
+This article introduces the first unit of The Style Guide - Project Layout. The unit tells you about how to design the project layout well. The article starts with an intro, then describes the differences between good and bad layouts, and closes with some details about types of layouts.
 
 - [Introduction](#introduction)
 - [Good and Bad Layout](#good-and-bad-layout)
