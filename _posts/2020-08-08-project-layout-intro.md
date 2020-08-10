@@ -54,8 +54,6 @@ Now, let's figure out what makes a project layout good and bad.
 
 _Disclaimer:_ Terms "good" and "bad" are used as simple words to describe something that feels right, positive, helps and supports, as opposed to something that is less right, inconvenient, slows down and distracts. They're used not as judgements or labels, but as synonims for respective broader terms.
 
----
-
 
 ## Good and Bad Layout
 
