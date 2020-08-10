@@ -36,11 +36,11 @@ I hope you find something interesting and useful.
 
 ## Introduction
 
-Starting from a clean slate is always a pleasure when it comes to a new software project. There is no legacy _yet_, no technical debt and any other sources of anxiety. The pleasant experience can be maintained at a high level throughout the project's lifecycle. One of the key contributors to the experience of developing and maintaining a project is its layout, the file and folder structure and organisation. In the world of Go it's extremely important because a structure can be both helping and limiting, depending on how it's implementated.
+Starting from a clean slate is always a pleasure when it comes to a new software project. There is no legacy _yet_, no technical debt and any other sources of anxiety. The pleasant experience can be maintained at a high level throughout the project's lifecycle. One of the key contributors to the experience of developing and maintaining a project is its layout, the file and folder structure and organisation. In the world of Go it's extremely important because a structure can be both helping and limiting, depending on how it's implemented.
 
 This unit focuses on the project layout design. A layout design is how the folders and files are organised in a codebase, and thus in the repository containing the codebase. A layout sets the stage for all further design and architecture decisions for a project, such as package layout, logical and functional grouping. It also affects maintenance routines like producing build artefacts, CI and CD, rolling out and shipping to the user.
 
-Depending on whether a layout is good or not, it may either significantly help and simplify everyday tasks, or it can make it quite complicated and poor. A good project layout helps you leverage and benefit from techology, whereas with a bad design any change to the structure is more of a fight with technology.
+Depending on whether a layout is good or not, it may either significantly help and simplify everyday tasks, or it can make them quite complicated and poor. A good project layout helps you leverage and benefit from techology, whereas with a bad design any change to the structure is more of a fight with technology.
 
 The importance of creating and following a good layout is clear. You create a project once, and this operation is technically quick and easy. But you have to work with the project until it's sunsetted, and this may and should last for years. The ease of creating a new folder hides the importance of putting a thought into how to set a project in a way that's both helping, convenient and makes sense. It's better to take some time to think about how this is going to look like in a week, a month, half a year, and two years from now. If this is done _before_ anything is created, then working on the project will be much easier.
 
@@ -64,7 +64,7 @@ So, what makes a project layout bad? Can it even be bad? Why should we bother ab
 
 ### Bad Layout
 
-Have you ever been supporting a project with so long list of files scattered in the root directory, so it takes you several scrolls to get to the README file on the project's repository homepage on Github?
+Have you ever been supporting a project with so long list of files scattered in the root directory, so it takes you several scrolls to get to the README file on the project's repository homepage on GitHub?
 
 Have you ever been maintaining a project where half of the application is contained in the `main` package, and the entirety of the `main` package resides at the root level of the repository?
 
@@ -74,23 +74,23 @@ How often did you need to replace or move parts of a project and then fix the im
 
 How often do you find a folder that exists only to contain another folder?
 
-Positive answers to any of these and other similar questions are signs of that you've encountered a bad project layout. When working with such a project, even as simple operation as building a binary can turn into a trouble since you don't know whether the resulting binary will be accidentally included with the next commit or not.
+Positive answers to any of these and other similar questions are signs of that you've encountered a bad project layout. When working with such a project, even as simple operation as building a binary can turn into trouble since you don't know whether the resulting binary will be accidentally included with the next commit or not.
 
 So what are the characteristics of a suboptimal layout anyway? It can be nearly anything that leads to any of the following symptoms:
 - a long list of files scattered at the root or any other level of a project
 - a long list directories scattered at the root or any other level of a project
 - files of different purposes are mixed at the root or any other level
-    - code and configuration files (the app's configuration files)
-    - code and CI scripts
-    - code and tool's configurations
-    - images or any other content
+  - code and configuration files (the app's configuration files)
+  - code and CI scripts
+  - code and tool's configurations
+  - images or any other content
 - there is no definite place for outputting build artefacts
 - `.gitignore` does not exclude anything that should not be committed
 - the structure does not support or reflect architecture of a project
-    - having both `app` and `server` directories at the same level - does this project provide an app? Or a server? Or it's a poor project layout design?
+  - having both `app` and `server` directories at the same level - does this project provide an app? Or a server? Or it's a poor project layout design?
 - the project structure leads to leakage of implementation details to the public API surface level
-    - users can use parts of the implementation that are supposed to be internal
-    - thus maintenance of the project is now complicated and slowed down since the public API is much broader than it should be
+  - users can use parts of the implementation that are supposed to be internal
+  - thus maintenance of the project is now complicated and slowed down since the public API is much broader than it should be
 - the project structure is unnecessarily complicated and contains a multi-level hierarchy that implements a taxonomy of packages
 
 A mixture of even two of the symptoms listed above can significantly complicate project development and maintenance in long-term. Even worse may things become if a project is large, and is being developed by more than one person. Suffering can be endless, if that's an open-source project, and it's a popular one.
@@ -102,33 +102,33 @@ So you really want to invest in a good project structure that will help and supp
 
 Now as we have learned some of symptoms of a bad project layout, it's time to know how a good one looks and feels like?
 
-Overall, a good structure should be unnoticeable in everyday work. It exists, but as if it was invisible. Once defined, described and set, it just guides you. It limits the number of mistakes, helps to onboard new developers, supports maintenance routines, and does help in many other different ways. Let's look at some of those.
+Overall, a good structure should be unnoticeable in everyday work. It exists, but as if it were invisible. Once defined, described and set, it just guides you. It limits the number of mistakes, helps to onboard new developers, supports maintenance routines, and does help in many other different ways. Let's look at some of those.
 
 A good design for layout suits well for a project:
-    - if a project is a library, the layout should reflect and _support_ that
-    - if a project is an application, then the layout should make development and maintenance easier
-    - if a project uses the monolithic repository approach, it's clear where different services, libraries and other parts reside, and where to add new things.
+- if a project is a library, the layout should reflect and _support_ that
+- if a project is an application, then the layout should make development and maintenance easier
+- if a project uses the monolithic repository approach, it's clear where different services, libraries and other parts reside, and where to add new things.
 
 A good layout limits the chances of misplacing something:
-    - when files and directories are logically and functionally well organised, it's harder to misplace a new file
-    - the structure helps in deciding whether a new file should be a part of the existing tree, or it deserves a new level.
+- when files and directories are logically and functionally well organised, it's harder to misplace a new file
+- the structure helps in deciding whether a new file should be a part of the existing tree, or it deserves a new level.
 
 A good layout reduces the mental load required to work with a project day by day:
-    - it's clear where binaries should go
-    - test coverage reports do not pollute commits
-    - changing CI configuration is straightforward
-    - files of different purposes are grouped in a way that makes logical and functional sense
-    - it's hard to accidentaly commit and push garbage files.
+- it's clear where binaries should go
+- test coverage reports do not pollute commits
+- changing CI configuration is straightforward
+- files of different purposes are grouped in a way that makes logical and functional sense
+- it's hard to accidentally commit and push garbage files.
 
 A good layout simplifies navigation through a project:
-    - it's convenient and easy to navigate in an editor/IDE
-    - the homepage looks nice and well organised
-    - in a terminal window, it's easy to work with files using standart and simple console tools.
+- it's convenient and easy to navigate in an editor/IDE
+- the homepage looks nice and well organised
+- in a terminal window, it's easy to work with files using standard and simple console tools.
 
 A good layout helps you to maintain a project in a healthy state:
-    - implementation details are kept private, yet still available as exported within a project
-    - the possibility of creating an import cycle is reduced by design
-    - the structure and hierarchy represent the business logic and relations between different parts of a project.
+- implementation details are kept private, yet still available as exported within a project
+- the possibility of creating an import cycle is reduced by design
+- the structure and hierarchy represent the business logic and relations between different parts of a project.
 
 As you can see, a good layout is more than just the opposite of the symptoms of a bad one. A good layout is the foundation for a development process focused on producing great software. If you have it, than you've got more mental energy to focus on creative solutions for hard problems. If you don't, then part of the energy is wasted.
 
@@ -160,12 +160,11 @@ By a project we mean a few related and similar things at the same time:
 
 In the modern world it's hard to imagine a project that is not published on some service for collaboration and synchronisation with other people. Even if a developer is working on a project alone, they still need to keep it in sync between different devices, and to make sure the code is not lost, if something happens to a computer.
 
-Given that, the section assumes that some service is used to store code of a project. While there are many of them, for simplicity we assume it's Github.
+Given that, the section assumes that some service is used to store code of a project. While there are many of them, for simplicity we assume it's GitHub.
 
 The rest of the section focuses on describing guidelines; we start with the commonalities, and then consider aspects that are different. Because it's not hard rules, but rather suggestions, they're flexible, and will differ from project to project. There are also some exceptions, which is natural for any healthy-sense driven guidelines.
 
-_Disclaimer: Neither the author, nor this work are affiliated or benefit in any way from Github._
-
+_Disclaimer: Neither the author, nor this work are affiliated or benefit in any way from GitHub._
 
 ---
 
