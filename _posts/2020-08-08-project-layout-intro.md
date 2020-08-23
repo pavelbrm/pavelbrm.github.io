@@ -40,24 +40,24 @@ Starting from a clean slate is always a pleasure when it comes to a new software
 
 This unit focuses on the project layout design. A layout design is how the folders and files are organised in a codebase, and thus in the repository containing the codebase. A layout sets the stage for all further design and architecture decisions for a project, such as package layout, logical and functional grouping. It also affects maintenance routines like producing build artefacts, CI and CD, rolling out and shipping to the user.
 
-Depending on whether a layout is good or not, it may either significantly help and simplify everyday tasks, or it can make them quite complicated and poor. A good project layout helps you leverage and benefit from techology, whereas with a bad design any change to the structure is more of a fight with technology.
+Depending on whether a layout is good or not, it may either significantly help and simplify everyday tasks, or it can make them quite complicated and poor. A good project layout helps you leverage and benefit from technology, whereas with a bad design any change to the structure is more of a fight with technology.
 
 The importance of creating and following a good layout is clear. You create a project once, and this operation is technically quick and easy. But you have to work with the project until it's sunsetted, and this may and should last for years. The ease of creating a new folder hides the importance of putting a thought into how to set a project in a way that's both helping, convenient and makes sense. It's better to take some time to think about how this is going to look like in a week, a month, half a year, and two years from now. If this is done _before_ anything is created, then working on the project will be much easier.
 
 The rest of the unit covers the following:
-- Good vs. Bad project lauout
+- Good vs. Bad project layout
 - Layout for a library
 - Single application layout
-- Layout for a monolithic, multiservice repository.
+- Layout for a monolithic, multi-service repository.
 
 Now, let's figure out what makes a project layout good and bad.
 
-_Disclaimer:_ Terms "good" and "bad" are used as simple words to describe something that feels right, positive, helps and supports, as opposed to something that is less right, inconvenient, slows down and distracts. They're used not as judgements or labels, but as synonims for respective broader terms.
+_Disclaimer:_ Terms "good" and "bad" are used as simple words to describe something that feels right, positive, helps and supports, as opposed to something that is less right, inconvenient, slows down and distracts. They're used not as judgements or labels, but as synonyms for respective broader terms.
 
 
 ## Good and Bad Layout
 
-You can't know if something is good until you learn what a similar bad thing looks like. A bad thing might be percieved as good _until_ you experience a trully good thing. Take, for instance, coffee. For someone who has never had it, almost any coffee can be considered as coffee, and it may even be unquestioned. But when after trying various kinds you take a sip of Supreme coffee made well, you no longer think that coffee from a nespresso machine is tasty.
+You can't know if something is good until you learn what a similar bad thing looks like. A bad thing might be perceived as good _until_ you experience a truly good thing. Take, for instance, coffee. For someone who has never had it, almost any coffee can be considered as coffee, and it may even be unquestioned. But when after trying various kinds you take a sip of Supreme coffee made well, you no longer think that coffee from a Nespresso machine is tasty.
 
 So, what makes a project layout bad? Can it even be bad? Why should we bother about it?
 
@@ -70,7 +70,7 @@ Have you ever been maintaining a project where half of the application is contai
 
 How often do you find unnecessary artefacts in a repository after building an application or running tests?
 
-How often did you need to replace or move parts of a project and then fix the imports to fix an import cycle, or when the stucture no longer makes sense?
+How often did you need to replace or move parts of a project and then fix the imports to fix an import cycle, or when the structure no longer makes sense?
 
 How often do you find a folder that exists only to contain another folder?
 
@@ -130,7 +130,7 @@ A good layout helps you to maintain a project in a healthy state:
 - the possibility of creating an import cycle is reduced by design
 - the structure and hierarchy represent the business logic and relations between different parts of a project.
 
-As you can see, a good layout is more than just the opposite of the symptoms of a bad one. A good layout is the foundation for a development process focused on producing great software. If you have it, than you've got more mental energy to focus on creative solutions for hard problems. If you don't, then part of the energy is wasted.
+As you can see, a good layout is more than just the opposite of the symptoms of a bad one. A good layout is the foundation for a development process focused on producing great software. If you have it, then you've got more mental energy to focus on creative solutions for hard problems. If you don't, then part of the energy is wasted.
 
 The layout of a project depends on many factors. The most important one is the kind of a project. The layout will be different for a library, a single application or service, and for a monolithic repository, while there are some commonalities that make better any kind of a project.
 
@@ -143,7 +143,7 @@ The layout of a project depends on its type and purpose. The layout should suit 
 
 A good way to describe the importance of using a good layout is an analogy with clothes. We all have things that suit us well; in this case the clothes fit us naturally so we don't even notice its presence. When a thing doesn't suit well, we might not notice it too, but by the middle of a day we've experienced more stress; when the garment is taken off at the end of a day, it feels much better.
 
-The same is true for a project. Its structure may be unnoticed because it's natural and convenient, whereas with other projects we sometimes can't recognise the source of anxiety. That anxiety, in fact, is a sum of many factors, and one of them might be an incovenient structure of a project.
+The same is true for a project. Its structure may be unnoticed because it's natural and convenient, whereas with other projects we sometimes can't recognise the source of anxiety. That anxiety, in fact, is a sum of many factors, and one of them might be an inconvenient structure of a project.
 
 A project is created once, and is maintained until its end of life. This means that you really want to invest in a good structure so interactions with codebase are on the positive side, and facilitate productivity.
 
@@ -167,5 +167,7 @@ The rest of the section focuses on describing guidelines; we start with the comm
 _Disclaimer: Neither the author, nor this work are affiliated or benefit in any way from GitHub._
 
 ---
+
+PS. Thank you Evan Shaw for the feedback.
 
 To be continued...
