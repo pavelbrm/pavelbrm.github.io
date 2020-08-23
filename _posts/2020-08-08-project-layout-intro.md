@@ -14,7 +14,7 @@ This post is opens up a series of the draft contents for [the book](https://blog
 
 <!--more-->
 
-![](/assets/m1u1_11.jpg)
+![](/assets/m1u1_1.jpg)
 
 
 ## Before We Begin
