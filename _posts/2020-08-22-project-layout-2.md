@@ -9,7 +9,7 @@ tags: [golang, m1u1]
 >
 > – Albert Einstein
 
-The second post in the the series of drafts of the book continues the topic started [recently](https://blog.pavelbrm.com/golocron/2020/08/08/project-layout-intro/). It introduces guidelines for laying out a project which are common for various kinds of projects, and then considers guidelines for a library and single application.
+The second post in the series of drafts of the book continues the topic started [recently](https://blog.pavelbrm.com/golocron/2020/08/08/project-layout-intro/). It introduces guidelines for laying out a project which are common for various kinds of projects, and then considers guidelines for a library and single application.
 
 
 <!--more-->
