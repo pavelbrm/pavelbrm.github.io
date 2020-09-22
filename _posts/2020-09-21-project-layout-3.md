@@ -24,6 +24,29 @@ As we're currently still at the project level, most of advice given below is lan
 
 Hope you find something interesting and useful.
 
+- [Monolithic Repository](#monolithic-repository)
+- [Naive Monorepo](#naive-monorepo)
+- [Service-Based Monorepo](#service-based-monorepo)
+- [Entity-Focused Monorepo](#entity-focused-monorepo)
+- [The Structured Monorepo](#the-structured-monorepo)
+- [The Layout of a Structured Monorepo](#the-layout-of-a-structured-monorepo)
+  - [Use Appropriate Position at the File Tree](#use-appropriate-position-at-the-file-tree)
+  - [Organise Utility Code as Own Standard Library](#organise-utility-code-as-own-standard-library)
+    - [Utility Code](#utility-code)
+    - [Details and Discussion](#details-and-discussion)
+    - [In Practice](#in-practice)
+  - [Have Sandbox for Breaking Changes](#have-sandbox-for-breaking-changes)
+    - [Details and Discussion](#details-and-discussion)
+- [Monorepo: Additional Chapters](#monorepo-additional-chapters)
+  - [Open Questions](#open-questions)
+  - [More Structure with Nested Modules](#more-structure-with-nested-modules)
+  - [Multiple Monorepos](#multiple-monorepos)
+    - [Multiple Single-Module Monorepos](#multiple-single-module-monorepos)
+    - [Architectural Monorepos](#architectural-monorepos)
+    - [Technology-Specific Monorepos](#technology-specific-monorepos)
+    - [Multiple Monorepos with Nested Modules](#multiple-monorepos-with-nested-modules)
+- [Closing Notes](#closing-notes)
+
 
 ## Monolithic Repository
 
@@ -341,7 +364,7 @@ Having put an extra stress on the importance of being cautious with added comple
 _NOTE: In the context of the next section we use the term "nested modules" for a Go module that is located not at the root of a repository, potentially having siblings in neighbour directories. We deliberately refrain from using the term "submodule" to avoid confusing it with a Git submodule. Git submodules are not considered in and are outside of the scope of the book._
 
 
-#### More Structure with Nested Modules
+### More Structure with Nested Modules
 
 Consider converting the top-level packages into nested modules when need more fine grained control and flexibility over packages' lifecycle.
 
