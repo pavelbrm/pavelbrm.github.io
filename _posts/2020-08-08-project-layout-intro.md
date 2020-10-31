@@ -7,7 +7,7 @@ tags: [golang, m1u1]
 
 > The beginning is the most important part of the work.
 >
-> — Plato
+> – Plato
 
 This post is opens up a series of the draft contents for [the book](https://blog.pavelbrm.com/programming/2020/06/27/about-software-development-with-golang/) I'm currently working on.
 
