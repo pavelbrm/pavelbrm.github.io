@@ -246,17 +246,17 @@ It's worth noting that sometimes changes are so important that it makes sense to
 
 ## Conclusion
 
-What is the most important ingredient in a relationship? Trust. A significant contributor to trust is communication, clear, transparent and honest. As long as involved parties trust each other, the relationships lasts.
+What is the most important ingredient in a relationship? Trust. A significant contributor to trust is communication, clear, transparent and honest. As long as involved parties trust each other, the relationships continues to last.
 
 There is a relationship when someone uses software; it's between the user and the developer. The user might be a single person, or a larger group; similarly, there might be a single developer, or an organisation. The important thing is whether there is trust in the relationship.
 
-It is the features and quality of the software what forms the foundation for the trust. If it works, and works well, then users remain loyal. The documentation plays an important role, and is a big part of communication between the developer and the user. So far so good.
+It is the features and quality of the software what forms the foundation for the trust. If it works, and works well, then users remain loyal. The documentation plays an important role, and is a big part of communication between the developer and user. So far so good.
 
-When is trust lost, assuming there is no betrayal or lie involved? When expectations aren't met is one possible reason. The other, however, when something unexpected happens, regularly, without a notice. When something changes, but neither the changes, nor the reasons for them are not communicated, or communicated poorly.
+When is trust lost, assuming there is no betrayal or lie involved? One possible reason is when expectations are not met. The other is, however, when something unexpected happens, regularly, without a notice. When something changes, but neither the changes, nor the reasons for them have been communicated, or communicated poorly.
 
-A changelog is the way to communicate changes and the reasons behind them. A well-written changelog communicates what's changed clearly, transparently and honestly. This is why, if you want to build lasting relationships with your users, you need to maintain a changelog.
+A changelog is the way for addressing the issue. A well-written changelog communicates what's changed clearly, transparently and honestly. This is why, if you want to build lasting relationships with your users, you need to maintain a changelog.
 
-The ideas and suggestions in this section are based on learnings and experiences gained over the past years, and from various sources. A great resource for reference, and where some of the ideas were looked at for inspirations, is [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). Another good place to learn is real-life examples. The list below includes some that are worth looking at:
+The ideas and suggestions in this section are based on learnings and experiences gained over many years, and from various sources. A great resource for reference, and where some of the ideas were looked at for inspirations, is [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). Another good place to learn from is real-life examples. The list below includes some that are worth looking at:
 - [iced](https://github.com/hecrj/iced/blob/master/CHANGELOG.md)
 - [tikv](https://github.com/tikv/tikv/blob/master/CHANGELOG.md)
 - [druid](https://github.com/linebender/druid/blob/master/CHANGELOG.md)
@@ -264,7 +264,7 @@ The ideas and suggestions in this section are based on learnings and experiences
 - [docker-ce](https://github.com/docker/docker-ce/blob/master/CHANGELOG.md)
 - [keep-a-changelog](https://github.com/olivierlacan/keep-a-changelog/blob/master/CHANGELOG.md).
 
-The ultimate goal is to let users of your software know about the changes you make. If the suggestions given here don't suit, or too resource demanding, focus on communicating changes to the user in a simplest possible form. While the way it's done is important, it's secondary to the fact that it's done. Trust is hard to gain, but easy to loose. Make sure that, while making changes to increase trust, the way the changes are communicated support that increase.
+The ultimate goal is to let users of your software know about the changes you make. If the suggestions given here don't suit, or too resource demanding, focus on communicating changes to the user in a simplest possible form. While the way it's done is important, it's secondary to the fact that it's done at all. Trust is hard to gain, but easy to loose. Make sure that, while making changes to increase trust, the way the changes are communicated support that increase.
 
 
 ---
