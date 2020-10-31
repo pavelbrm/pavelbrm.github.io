@@ -252,7 +252,7 @@ There is a relationship when someone uses software; it's between the user and th
 
 It is the features and quality of the software what forms the foundation for the trust. If it works, and works well, then users remain loyal. The documentation plays an important role, and is a big part of communication between the developer and user. So far so good.
 
-When is trust lost, assuming there is no betrayal or lie involved? One possible reason is when expectations are not met. The other is, however, when something unexpected happens, regularly, without a notice. When something changes, but neither the changes, nor the reasons for them have been communicated, or communicated poorly.
+When is trust lost, assuming there is no betrayal or lie involved? One possible reason is when expectations are not met. The other is, however, when something unexpected happens, regularly, without a notice; when something changes, but neither the changes, nor the reasons for them have been communicated, or communicated poorly.
 
 A changelog is the way for addressing the issue. A well-written changelog communicates what's changed clearly, transparently and honestly. This is why, if you want to build lasting relationships with your users, you need to maintain a changelog.
 
