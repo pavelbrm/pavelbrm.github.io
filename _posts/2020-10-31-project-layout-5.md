@@ -117,7 +117,7 @@ Having developed and maintained software that was relied upon in everyday work b
 The changelog is where engineers look at while making decisions about using a library or updating it. Keep in mind that "engineers" means not only software developers that use the project in their environments; the target audience, depending on the popularity and how widespread the project is, also includes:
 - system administrators and operations engineers
 - SRE and Devops people
-- application security analytics and engineers
+- application security analysts and engineers
 - and whoever is working with them, such as support and sale teams, lead engineers, product managers, designers, etc.
 
 Given this, make sure that the changelog provides what it is expected to provide  - the information about what's changed, when, how it affects the user, and what to pay a special attention to.
