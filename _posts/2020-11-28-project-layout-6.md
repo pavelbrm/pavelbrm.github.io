@@ -75,7 +75,7 @@ At the end of the unit it is worth summarising all of the suggestions and recomm
      - [the style and wording should be consistent](https://blog.pavelbrm.com/golocron/2020/10/31/project-layout-5/#be-consistent)
      - [and the information you add to the changelog is relevant](https://blog.pavelbrm.com/golocron/2020/10/31/project-layout-5/#provide-relevant-information).
 
-An insightful reader might have already noticed that there is something common among the guidelines proposed here. The underlyng principles for the suggestions in this and next units are basic and simple. Everyone knows about them, but fewer people do actually follow them in real life. As a reminder and a hint, they're listed below:
+An insightful reader might have already noticed that there is something common among the guidelines proposed here. The underlying principles for the suggestions in this and next units are basic and simple. Everyone knows about them, but fewer people do actually follow them in real life. As a reminder and a hint, they're listed below:
 
 - Do what needs to be done, and don't be lazy.
 - Anything you do, do it at the best level.
