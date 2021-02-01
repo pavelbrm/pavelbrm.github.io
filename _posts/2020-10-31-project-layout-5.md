@@ -13,7 +13,7 @@ A significant part of the release process is letting your users know about what'
 
 <!--more-->
 
-![](/assets/m1u1_5_1.jpg)
+![](/assets/m1u1_5.jpg)
 
 
 ## Before We Begin
