@@ -31,15 +31,16 @@ But it's time to move on, and this post opens up a series dedicated to the secon
 - structuring a package, and organising files in it
 - designing packages in a cross-platform setup.
 
-This post starts with a general introductin to the topic, and explains why it is important to design packages well in general, and in Go in particular.
-
-I hope you'll find something interesting and helpful in this material.
-
+This post starts with a general introductin to the topic, and explains why it is important to design packages well in general, and in Go in particular. We also talk about the `main` package from the oragnisational perspective.
 
 - [Package Layout](#package-layout)
 - [What is a Package](#what-is-a-package)
 - [When to Create a Package](#when-to-create-a-package)
 - [Keep Public API as Narrow as Possible](#keep-public-api-as-narrow-as-possible)
+- [The Main Package](#the-main-package)
+- [Package Provides Something](#package-provides-something)
+
+I hope you'll find something interesting and helpful in this material.
 
 
 ## Package Layout
@@ -132,6 +133,71 @@ Fourth, the only thing that is constant about software is CHANGE. Change means m
 At this point we know what a package is, when to create one, and that it's important to design it carefully. A more practical advice on how to achieve most of these goals in code will be discussed further in this and following units. The primary focus of the remainder of this unit is the structure of a package. We start with a very special one, `main`, and then survey guidelines for regular packages.
 
 The next draft post will continue the discussion with the `main` package, and go deeper.
+
+
+## The Main Package
+
+Keep the `main` package as small and focused as possible.
+
+The `main` package defines the entry point of an application. This means that the code in this package is responsible for:
+- obtaining the configuration required to set up the application from external sources
+- setting up the proper lifecycle (the topic is explained in detail in Module 2 - Foundation):
+    - setting up proper error flow
+    - making sure all allocated and occupied resources are **always** cleaned up and released
+    - providing guarantees that all `defer`red calls are **always** executed
+    - ensuring the service stops gracefully
+- instantiating external dependencies for a service (this and other application-specific questions are considered in Module 3):
+    - clients to any external services
+        - databases and storages
+        - other services
+    - any other connections without which the service cannot exist
+    - any files required for the service to operate (incl. pid, lock, pipes)
+    - the logger
+- performing pre-flight checks
+- creating an instance of the service
+- starting up the service.
+
+The `main` package (and, as you'll know in a moment, the `main.go` file) is the *right* place to instantiate, create, check anything that is required for a service or application to start up and run correctly. Think about this the following way: anything that your app can't fix at runtime, **must** originate from the `main` package (and, as you'll know later, passed as arguments to the constructors of parts which the app is made of). As a consequence, *anything else should live outside of the `main` package*.
+
+Here are some examples of what _can_ originate from the `main` function:
+- instances of any databases a service is using, unless the service can function fully without them, or the service is designed such that it can self-heal
+- any permissions in the system/platform under which the service is running, unless the service can fix or legally workaround missing entitlements
+- any files and related permissions that are relied upon at later stages, such as unix sockets, log files, temporary locations, configuration files, storages for data, and so forth
+- anything else without which it does not make sense to continue execution of the process, because there is no reason to allocate memory and waste resources if the environment you're running in and circumstance do not allow operating healthily. Unless, of course, you're expecting so and prepared for that.
+
+It's worth mentioning that there are some libraries that implicitly facilitate a poor layout of the `main` package. There are many applications out there available for looking at to obtain enough evidence to support this. When a project uses such a library, the recommendations from documentation are often taken as is, and the `main` package (and often the entire project) is deteriorated by the code which uses, is used or required by such libraries. So instead of simply copying code from the examples, think of a better way of organising code, so that the `main` package remains the entry point with as less contents as possible.
+
+The contents of the `main` package, ideally, should be in the single file, `main.go`. The most important part of the `main.go` file is the `main` function. The package, file and function must be free from clutter, short and focused.
+
+The suggestions above are not hard to follow when a service is well designed and thought through. The primary goal of these is to make the instantiation process clean and straightforward, as well as explicit. Another important goal is to reduce, as much as possible, the mental load required when working on a project. The `main.go` file is the introduction to the story you tell in code. So make sure the reader is welcomed to follow it, and not confused.
+
+
+## Package Provides Something
+
+A package **provides** tools for solving a particular problem.
+
+It's important to understand that a package in Go is not a container for arbitrary code that shares some commonalities. It's not a container in the usual meaning of the word. Instead, a package is a **provider** of a way for accomplishing a set of tasks.
+
+Think about how a library makes its way in to a project. There is a task to solve in the first place, and it is natural to seek for an existing solution first. Assuming a successful search, at the end of the process you find a library that does what you need, or significantly simplifies the task. So the library gives, or provides, something that you can use directly or as a building block. Notice that what you're searching for is not particular contents; it's rather a way, a solution, a tool to address a particular need. This illustrates that libraries (and not only in Go) for us, users, are providers, not collections.
+
+That insight suggests what the author of a library should be focusing on. As an author, you design a package to provide the users of the package with ways for accomplishing a particular, _well-defined_ set of tasks.
+
+Yet the vast majority of packages seen in private codebases is still just collections of something. It's very common and sad to see packages that contain things, either literally, or by design. That's usually due to lack of understanding of the purpose of a package, combined with lack of design. Refrain from approaching problems in such a way.
+
+The following example may sound corny, however it's worth repeating. A package named `tools` is a bad idea, the reasons given above tell us why. Such a package is a collection of usually arbitrary utility code that is either hard to decouple from its dependencies, or it has too wide, or sometimes too narrow, use case, so that it can't be put into a more specific and focused package. Thus, reject the idea of having a package like this. Instead, think about the following:
+- how to make code less dependent on details so it can be moved into a focused package that **provides** something
+- or, keep the code where it's used
+    - because it's unlikely to be needed somewhere else
+    - or because more often than not [duplication is cheaper than a wrong abstraction](https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction).
+
+If the reason for creating the `tools` package is to share code between other packages, ask the following questions:
+- why can't I import the package that contains code that I want to use? The answer may suggest that there's a bigger and deeper problem with the design that prevents you from using it, thus it should be solved first. For example, dependencies pointing into a wrong direction might signal violation of The Dependency Inversion Principle (DIP).
+- shouldn't the code, that is going to be shared, belong in the type it operates on, as a method? Then both places, the method, and the caller, would use code naturally, without a separate package.
+- is there another way to address the issue?
+
+On the other side, the `model` package makes a lot of sense, as long as it provides the models that represent the data structures and components of a business process. Each model encapsulates its behaviour, and the consuming packages (those that operate on models) can describe a business process using the behaviour of a model.
+
+Be sure the package you're about to create will provide something. That something comes in handy for the next step in planning a package.
 
 
 ---
