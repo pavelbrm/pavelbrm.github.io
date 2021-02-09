@@ -13,7 +13,7 @@ This post covers another important topic in the context of the project layout, t
 
 <!--more-->
 
-![](/assets/m1u1_4_2.jpg)
+![](/assets/m1u1_4.jpg)
 
 
 ## Before We Begin

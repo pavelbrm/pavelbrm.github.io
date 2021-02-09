@@ -15,7 +15,7 @@ This short post concludes the series of drafts for the first unit of the book. I
 
 <!--more-->
 
-![](/assets/m1u1_6_3.jpg)
+![](/assets/m1u1_6.jpg)
 
 ## Summary
 

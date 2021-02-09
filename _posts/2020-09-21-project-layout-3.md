@@ -13,7 +13,7 @@ This post features another draft of [the book](https://blog.pavelbrm.com/program
 
 <!--more-->
 
-![](/assets/m1u1_3_1.jpg)
+![](/assets/m1u1_3.jpg)
 
 
 ## Before We Begin
@@ -180,13 +180,13 @@ There is no simple and direct answer. It's also where good planning and thinking
 Place packages appropriately in the file tree of a monolithic repository to reflect the importance and nature of a package.
 
 What does it mean and what properties can we use to determine a right placement of a package? There's no hard set of rules. The following heuristics can help in understanding where a package should be placed:
-- An approximate position of a package in the dependency graph.  
+- An approximate position of a package in the dependency graph.
 A package that is imported by many other different packages should be located closer to the root of the hierarchy. A rarely imported package is most likely an implementation detail, and should go deeper in the tree.
-- The frequency of use.  
+- The frequency of use.
 The position of a package is in direct proportion to of how frequently the package is used.
-- The importance of a package.  
+- The importance of a package.
 Something that is unique, and provides and implements an important piece of functionality should be placed closer to the top.
-- The level of abstraction and role.  
+- The level of abstraction and role.
 The higher the abstraction, the higher the level at which a package should be placed.
 
 For example, a package with code for converting internal errors from their internal representation to the external, and which is used by the most of the packages that implement application functionality, should be placed at the top level of the structure.
@@ -345,11 +345,11 @@ The approach to maintaining a monolithic repository outlined above is a good sta
 ### Open Questions
 
 What questions are left with no answers by the structured monorepo? Some of them include:
-- What if we need to maintain both, older and newer versions of a package?  
+- What if we need to maintain both, older and newer versions of a package?
 For example, this could easily be the case when a large number of services work with the same model, say a core business unit. You have to update the model, you tried to find a way to make a backward and forward-compatible change, but it seems to be either impossible or too resource demanding. Had this model been in a separate module, a new major version with a breaking change could have done the job. But with a monorepo, everything is versioned as a whole, or not versioned at all.
-- What if some packages are changed too often, such that it's hard for other teams to keep their services up to date with the changes? Or, how to allow quick and frequent changes in code that is relied upon by other code?  
+- What if some packages are changed too often, such that it's hard for other teams to keep their services up to date with the changes? Or, how to allow quick and frequent changes in code that is relied upon by other code?
 While this should not be normally the case in a well-designed system, this happens. There might be places in a codebase which are depended upon by hot execution paths, and for some reason changes to them are made quite often. If several teams are forced to perform routine updates caused by the work of another team, this can quickly become a major bottleneck, a source of anxiety and even lead to a (rather wrong) conclusion that monorepos don't work.
-- What if infrastructure and utility code changes often enough to bother other teams with the need to keep their services up to date?  
+- What if infrastructure and utility code changes often enough to bother other teams with the need to keep their services up to date?
 Similarly to the previous question, this normally should not happen. Yet, sometimes this happens, especially when the initially written low-level code is not optimal (someone quickly prototyped, and forgot to finalise the work by taking the draft to a solution that is done well), and at some point it needs to be refactored. In such case, there *will* be breaking changes, and having everything in a single repository dictates the need to adjust all depending services at the same time.
 - What if all of the above is the case, the number of people working on a project is large, as well as the codebase, which is slightly aged and has got a fair amount of legacy in it?
 
@@ -376,7 +376,7 @@ In general, the technique works as follows:
 - some of the top-level packages are separate modules
 - each such package, i.e. module, is versioned separately
 - each module can import another module, as if it was just a package
-- following the conventions set by semantic versioning is mandatory, i.e. each breaking and incompatible change requires a new major version of such module  
+- following the conventions set by semantic versioning is mandatory, i.e. each breaking and incompatible change requires a new major version of such module
 This allows the use of a separate import path by the code that is interested in the newest version, while the code that is yet to be updated continues using the older version.
 
 Now let's look at an example. Here, we have a monolithic repository called `monorepo` owned by the `myorg` account. In the repo, we've got two packages - `model` and `controller`. Everything up until now has been as a single module, defined at the root of the repository. Our task is to convert the two packages into nested modules, and to version them independently. The execution plan consists of three steps, for each package:
