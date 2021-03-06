@@ -15,6 +15,8 @@ This post covers another important topic in the context of the project layout, t
 
 ![](/assets/m1u1_4.jpg)
 
+<sub>_Photo credit:_ <a href="https://unsplash.com/@heysupersimi" target="_blank">_Simone Hutsch_</a></sub>
+
 
 ## Before We Begin
 

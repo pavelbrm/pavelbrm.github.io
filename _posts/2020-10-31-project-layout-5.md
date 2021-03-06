@@ -15,6 +15,8 @@ A significant part of the release process is letting your users know about what'
 
 ![](/assets/m1u1_5.jpg)
 
+<sub>_Photo credit:_ <a href="https://unsplash.com/@heysupersimi" target="_blank">_Simone Hutsch_</a></sub>
+
 
 ## Before We Begin
 

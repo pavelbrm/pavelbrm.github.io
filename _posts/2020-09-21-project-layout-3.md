@@ -15,6 +15,8 @@ This post features another draft of [the book](https://blog.pavelbrm.com/program
 
 ![](/assets/m1u1_3.jpg)
 
+<sub>_Photo credit:_ <a href="https://unsplash.com/@heysupersimi" target="_blank">_Simone Hutsch_</a></sub>
+
 
 ## Before We Begin
 
