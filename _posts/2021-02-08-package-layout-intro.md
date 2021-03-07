@@ -18,7 +18,7 @@ With this post I continue publishing drafts of the book I've been working on sin
 
 ![](/assets/m1u2_1.jpg)
 
-<sub>_Photo credit: [Simone Hutsch](https://unsplash.com/@heysupersimi)_</sub>
+<sub>_Photo credit:_ <a href="https://unsplash.com/@heysupersimi" target="_blank">_Simone Hutsch_</a></sub>
 
 
 ## Before We Begin

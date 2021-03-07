@@ -17,6 +17,9 @@ This short post concludes the series of drafts for the first unit of the book. I
 
 ![](/assets/m1u1_6.jpg)
 
+<sub>_Photo credit:_ <a href="https://unsplash.com/@heysupersimi" target="_blank">_Simone Hutsch_</a></sub>
+
+
 ## Summary
 
 We began the unit with the excitement of starting something new. However, it's often the case that this excitement fades away quickly, if the project has not been properly cared of.
