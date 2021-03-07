@@ -21,7 +21,7 @@ This is the next piece of the Package Layout guidelines, and it tells you about 
 
 ## Before We Begin
 
-I've been planning on publishing this draft for a month, but could not quite get to it. Over past couple of weeks the question of naming packages popped up a few times in the code reviews I've done, and every time it happened I wanted I had had this draft published. Referring those conversations to the material below would have been helpful.
+I've been planning on publishing this draft for a month, but could not quite get to it. Over past couple of weeks the question of naming packages popped up a few times in the code reviews I've conducted, and every time it happened I wanted I had had this draft published. Referring the material below in those conversations would have been helpful.
 
 It's surprising how often in day-to-day work life you can see poorly named packages. The Go Team did a good job in early days of the language in spreading its views on how packages in Go were supposed to be named. However, in recent years, the information has not been on people's radars, and more and more developers just don't pay enough attention to whether the package they're adding is named well or not.
 
@@ -151,7 +151,7 @@ If there is a strong need, desire or other reason to have `go` in the name, cons
 
 It's easy to see that the examples in the first column are shorter, cleaner, and nicer. This is what we want from names.
 
-One exception needs to be made. It's easy to imagine a situation when an organisation has versions of the same library implemented in a number of distinct technologies. And Go might be not the first time, so the most straightforward name is already taken. In such case, there are just a few options available:
+One exception needs to be made. It's easy to imagine a situation when an organisation has versions of the same library implemented in a number of distinct technologies. And Go might not be the first of them, and the most straightforward name might have already been taken. In such case, there are just a few options available:
 - get creative, and use a different name. Many companies do so, and experience has shown this to be one of the best options. This guarantees uniqueness.
 - or, add a suffix to the repository name, but not to the module name. For example, Twitch has `twirp-ruby`  in addition to Go's `twirp`.
 
