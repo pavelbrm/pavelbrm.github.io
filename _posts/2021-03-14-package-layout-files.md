@@ -29,17 +29,17 @@ In this draft, I summarise some of the learnings that, if applied, lead to a bet
 
 Table of contents:
 - [Structure](#structure)
-- [Flat by Default](#flat-by-default)
-- [Not a Sub-Package, But a Package in the Same Directory](#not-a-sub-package,-but-a-package-in-the-same-directory)
+  - [Flat by Default](#flat-by-default)
+  - [Not a Sub-Package, But a Package in the Same Directory](#not-a-sub-package-but-a-package-in-the-same-directory)
 - [Files in a Package](#files-in-a-package)
-- [Begin With a Single File Named as the Package](#begin-with-a-single-file-named-as-the-package)
-- [Organise Files by Topic, Responsibility and Behaviour](#organise-files-by-topic-responsibility-and-behaviour)
-- [Name Other Files Meaningfully](#name-other-files-meaningfully)
-- [Avoid Creating File per Object](#avoid-creating-file-per-object)
-- [Prefer Fewer Files of Larger Size](#prefer-fewer-files-of-larger-size)
-- [Keep Methods of a Type in The Same File](#keep-methods-of-a-type-in-the-same-file)
-- [Avoid Ambiguous File Names](#avoid-ambiguous-file-names)
-- [Use a Separate File for Documentation When Appropriate](#use-a-separate-file-for-documentation-when-appropriate)
+  - [Begin With a Single File Named as the Package](#begin-with-a-single-file-named-as-the-package)
+  - [Organise Files by Topic, Responsibility and Behaviour](#organise-files-by-topic-responsibility-and-behaviour)
+  - [Name Other Files Meaningfully](#name-other-files-meaningfully)
+  - [Avoid Creating File per Object](#avoid-creating-file-per-object)
+  - [Prefer Fewer Files of Larger Size](#prefer-fewer-files-of-larger-size)
+  - [Keep Methods of a Type in The Same File](#keep-methods-of-a-type-in-the-same-file)
+  - [Avoid Ambiguous File Names](#avoid-ambiguous-file-names)
+  - [Use a Separate File for Documentation When Appropriate](#use-a-separate-file-for-documentation-when-appropriate)
 
 I hope you enjoy. :-)
 
