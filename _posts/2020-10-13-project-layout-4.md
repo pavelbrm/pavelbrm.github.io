@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Style Guide: Project Layout 4 - Versioning and Go"
+title: "The Style Guide: Project Layout 4 – Versioning and Go"
 category: Golocron
 tags: [golang, m1u1]
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Style Guide: Project Layout 6 - Summary"
+title: "The Style Guide: Project Layout 6 – Summary"
 category: Golocron
 tags: [golang, m1u1]
 ---

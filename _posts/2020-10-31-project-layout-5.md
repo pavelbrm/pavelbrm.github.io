@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Style Guide: Project Layout 5 - Notes on Release Notes"
+title: "The Style Guide: Project Layout 5 – Notes on Release Notes"
 category: Golocron
 tags: [golang, m1u1]
 ---

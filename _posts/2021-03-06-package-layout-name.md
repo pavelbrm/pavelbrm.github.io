@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Style Guide: Package Layout 2 - Naming a Package"
+title: "The Style Guide: Package Layout 2 – Naming a Package"
 category: Golocron
 tags: [golang, m1u2]
 ---

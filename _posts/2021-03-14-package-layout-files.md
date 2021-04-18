@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Style Guide: Package Layout 3 - Structure and Files"
+title: "The Style Guide: Package Layout 3 – Structure and Files"
 category: Golocron
 tags: [golang, m1u2]
 ---

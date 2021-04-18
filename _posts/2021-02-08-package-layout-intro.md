@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Style Guide: Package Layout 1 - Intro"
+title: "The Style Guide: Package Layout 1 – Intro"
 category: Golocron
 tags: [golang, m1u2]
 ---

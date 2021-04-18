@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Style Guide: Project Layout 3 - Monorepos"
+title: "The Style Guide: Project Layout 3 – Monorepos"
 category: Golocron
 tags: [golang, m1u1]
 ---
