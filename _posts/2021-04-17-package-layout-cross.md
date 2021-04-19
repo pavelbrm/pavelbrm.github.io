@@ -11,7 +11,7 @@ tags: [golang, m1u2]
 >
 > – J. K. Rowling
 
-This draft is the first in a series about designing packages in the cross-platform context. It covers some basic theory and tells about the simplest way to control the Go compiler depening on a platform.
+This draft is the first in a series about designing packages in the cross-platform context. It covers some basic theory and tells about the simplest way to control the Go compiler depending on a platform.
 
 
 <!--more-->
@@ -57,7 +57,7 @@ This section aims to aid you with advice on working with cross-platform code fro
 
 ## Basic Principles of Writing Cross-Platform Code
 
-_Note: The content below is relevant to some other languages, though here are talking mainly about Go. A reasonable amount of simplifications is in place. Pay attention, and **think** about what you've read._
+_Note: The content below is relevant to some other languages, though here we're mainly talking about Go. A reasonable amount of simplifications is in place. Pay attention, and **think** about what you've read._
 
 In one sentence, writing cross-platform code can be almost indifferent from writing for a single platform, **if** you've done the homework, i.e. have learned and followed good design and architecture principles and rules. The principles we're referring to are SOLID, some of the design patterns and common sense. Otherwise, if the good practices are neglected, chances for success are dramatically lower, or even zero.
 
