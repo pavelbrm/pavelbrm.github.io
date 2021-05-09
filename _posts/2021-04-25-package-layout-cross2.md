@@ -9,7 +9,7 @@ tags: [golang, m1u2]
 >
 > But if the drop were not there, the ocean would be missing something.
 >
-> ― Mother Teresa
+> – Mother Teresa
 
 This is the second part in the series about designing cross-platform packages. It explores more advanced options for conditional compilation.
 
